@@ -1,0 +1,12 @@
+@charset "UTF-8";
+:root {
+
+}
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+body {
+
+}
