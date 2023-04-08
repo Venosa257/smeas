@@ -1,6 +1,12 @@
 @charset "UTF-8";
 :root {
-
+    --white: #fff;
+    --black: #000;
+    --cyan: #03e9f4;
+}
+* {
+    margin: 0;
+    padding: 0;
 }
 *,
 ::after,
@@ -8,5 +14,151 @@
     box-sizing: border-box;
 }
 body {
+    font-family: sans-serif;
+    height: 100%;
+    background: linear-gradient(lightgreen, green);
+}
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+.login h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+    color: var(--white);
+    text-align: center;
+}
+.login .user {
+    position: relative;
+}
+.login .user input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--white);
+    outline: none;
+}
+.login .user label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--white);
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.login .user input:focus ~ label,
+.login .user input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--cyan);
+    font-size: 12px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--cyan);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    transition: 0.5s ease;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.login form input[type="submit"]:hover {
+    background: var(--cyan);
+    color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--cyan), 0 0 25px var(--cyan), 0 0 50px var(--cyan), 0 0 100px var(--cyan);
 
+}
+.login form input[type="submit"] span {
+    position: absolute;
+    display: block;
+}
+.login form input[type="submit"] span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--cyan));
+    animation: btn1 1s linear infinite;
+}
+@keyframes btn1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+.login form input[type="submit"] span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--cyan));
+    animation: btn2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes btn2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+.login form input[type="submit"] span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--cyan));
+    animation: btn3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes btn3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+.login form input[type="submit"] span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--cyan));
+    animation: btn4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes btn4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
 }
