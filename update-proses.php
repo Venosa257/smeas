@@ -9,26 +9,25 @@ if(isset($_POST['simpan'])){
 
 	//jika tombol tambah benar di klik maka lanjut prosesnya
 	$id			= $_POST['id'];	//membuat variabel $id dan datanya dari inputan hidden id
-	$nis		= $_POST['nis'];	//membuat variabel $nis dan datanya dari inputan NIS
 	$nama		= $_POST['nama'];	//membuat variabel $nama dan datanya dari inputan Nama Lengkap
 	$kelas		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
 	$jurusan	= $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
 
 	//melakukan query dengan perintah UPDATE untuk update data ke database dengan kondisi WHERE siswa_id='$id' <- diambil dari inputan hidden id
 	//$update = mysql_query("UPDATE siswa SET siswa_nis='$nis', siswa_nama='$nama', siswa_kelas='$kelas', siswa_jurusan='$jurusan' WHERE siswa_id='$id'") or die(mysql_error());
-    $sql = "UPDATE siswa SET siswa_nis='$nis', siswa_nama='$nama', siswa_kelas='$kelas', siswa_jurusan='$jurusan' WHERE siswa_id='$id'";
+    $sql = "UPDATE sys_users SET name='$nama', class='$kelas', major='$jurusan' WHERE id_user='$id'";
 
 
 	//jika query update sukses
 	if(mysqli_query($koneksi, $sql)){
 
 		echo 'Data berhasil di simpan! ';		//Pesan jika proses simpan sukses
-		echo '<a href="index.php">Kembali</a>';	//membuat Link untuk kembali ke halaman
+		echo '<a href="home.php">Kembali</a>';	//membuat Link untuk kembali ke halaman
 
 	}else{
 
 		echo 'Gagal menyimpan data! ';		//Pesan jika proses simpan gagal
-		echo '<a href="index.php">Kembali</a>';	//membuat Link untuk kembali ke halaman
+		echo '<a href="home.php">Kembali</a>';	//membuat Link untuk kembali ke halaman
 
 	}
 

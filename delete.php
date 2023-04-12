@@ -12,18 +12,18 @@ if(isset($_GET['id'])){
 
 	//jika data ada di database, maka melakukan query DELETE table siswa dengan kondisi WHERE siswa_id='$id'
 	// $del = mysql_query("DELETE FROM siswa WHERE siswa_id='$id'");
-	$sql = "DELETE FROM siswa WHERE siswa_id='$id'";
+	$sql = "DELETE FROM sys_users WHERE id_user='$id'";
 
 	//jika query DELETE berhasil
 	if(mysqli_query($koneksi, $sql)){
 
 		echo 'Data siswa berhasil di hapus! ';		//Pesan jika proses hapus berhasil
-		echo '<a href="index.php">Kembali</a>';	//membuat Link untuk kembali ke halaman beranda
+		echo '<a href="home.php">Kembali</a>';	//membuat Link untuk kembali ke halaman beranda
 
 	}else{
 
 		echo 'Gagal menghapus data! ';		//Pesan jika proses hapus gagal
-		echo '<a href="index.php">Kembali</a>';	//membuat Link untuk kembali ke halaman beranda
+		echo '<a href="home.php">Kembali</a>';	//membuat Link untuk kembali ke halaman beranda
 
 	}
 

@@ -12,7 +12,7 @@ session_start();
     <title>Login</title>
     <link rel="stylesheet" href="./assets/css/style.bundle.css">
 </head>
-<body>
+<body class="loginbg">
     <div class="login">
         <h2>L O G I N</h2>
         <form action="login-proses.php" method="post">

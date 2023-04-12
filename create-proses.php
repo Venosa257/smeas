@@ -9,21 +9,21 @@ if(isset($_POST['tambah'])){
 	include('koneksi.php');
 
 	//jika tombol tambah benar di klik maka lanjut prosesnya
-	$nis		= $_POST['nis'];	//membuat variabel $nis dan datanya dari inputan NIS
-	$nama		= $_POST['nama'];	//membuat variabel $nama dan datanya dari inputan Nama Lengkap
-	$kelas		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
-	$jurusan	= $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
+	$name		= $_POST['nama'];	//membuat variabel $nama dan datanya dari inputan Nama Lengkap
+	$class		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
+	$major	    = $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
+	$role       = $_POST['role'];	//membuat variabel $role dan datanya dari inputan dropdown role
 
 	//melakukan query dengan perintah INSERT INTO untuk memasukkan data ke database
-	$sql = "INSERT INTO siswa VALUES(NULL, '$nis', '$nama', '$kelas', '$jurusan')";
+	$sql = "INSERT INTO sys_users (name, class, major, role_id) VALUES('$name', '$class', '$major', '$role')";
 
 	//jika query input sukses
 	if (mysqli_query($koneksi, $sql)) {
 		echo 'Data berhasil di tambahkan! ';		//Pesan jika proses tambah sukses
-		echo '<a href="index.php">Kembali</a>';	//membuat Link untuk kembali ke halaman tambah
+		echo '<a href="home.php">Kembali</a>';	//membuat Link untuk kembali ke halaman tambah
 	} else {
 		echo 'Gagal menambahkan data! ';		//Pesan jika proses tambah gagal
-		echo '<a href="index.php">Kembali</a>';	//membuat Link untuk kembali ke halaman tambah
+		echo '<a href="home.php">Kembali</a>';	//membuat Link untuk kembali ke halaman tambah
 		echo "Error: ".$sql.". ".mysqli_error($koneksi);
 	}
 
