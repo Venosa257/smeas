@@ -1,43 +1,47 @@
 <?php //include('cek-login.php'); ?>
 <?php include('header.php'); ?>
 
+<head>
+    <link rel="stylesheet" href="./assets/css/style.bundle.css">
+</head>
+<body>
 <h3>Tambah Data Siswa</h3>
 
-<form action="create-proses.php" method="post">
-	<table cellpadding="3" cellspacing="0">
-		<tr>
-			<td>Nama Lengkap</td>
-			<td>:</td>
-			<td><input type="text" name="nama" size="30" required></td>
-		</tr>
-		<tr>
-			<td>Kelas</td>
-			<td>:</td>
-			<td>
-				<select name="kelas" required>
-					<option value="">Pilih Kelas</option>
-					<option value="X">X</option>
-					<option value="XI">XI</option>
-					<option value="XII">XII</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td>Jurusan</td>
-			<td>:</td>
-			<td>
-				<select name="jurusan" required>
-					<option value="">Pilih Jurusan</option>
-					<option value="RPL">RPL</option>
-					<option value="Multimedia">Multimedia</option>
-					<option value="Akuntansi">Akuntansi</option>
-					<option value="Perbankan">Perbankan</option>
-					<option value="Pemasaran">Pemasaran</option>
+<form action="create-proses.php" method="post" enctype="multipart/form-data">
+    <table cellpadding="3" cellspacing="0">
+        <tr>
+            <td>Nama Lengkap</td>
+            <td>:</td>
+            <td><input type="text" name="nama" size="30" required></td>
+        </tr>
+        <tr>
+            <td>Kelas</td>
+            <td>:</td>
+            <td>
+                <select name="kelas" required>
+                    <option value="">Pilih Kelas</option>
+                    <option value="X">X</option>
+                    <option value="XI">XI</option>
+                    <option value="XII">XII</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Jurusan</td>
+            <td>:</td>
+            <td>
+                <select name="jurusan" required>
+                    <option value="">Pilih Jurusan</option>
+                    <option value="RPL">RPL</option>
+                    <option value="Multimedia">Multimedia</option>
+                    <option value="Akuntansi">Akuntansi</option>
+                    <option value="Perbankan">Perbankan</option>
+                    <option value="Pemasaran">Pemasaran</option>
                     <option value="Perhotelan">Perhotelan</option>
                     <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-				</select>
-			</td>
-		</tr>
+                </select>
+            </td>
+        </tr>
         <tr>
             <td>Role</td>
             <td>:</td>
@@ -50,12 +54,18 @@
                 </select>
             </td>
         </tr>
-		<tr>
-			<td>&nbsp;</td>
-			<td></td>
-			<td><input type="submit" name="tambah" value="Tambah"></td>
-		</tr>
-	</table>
+        <tr>
+            <td>Gambar</td>
+            <td>:</td>
+            <td><input type="file" name="gambar" id="gambar" ></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td></td>
+            <td><input type="submit" name="tambah" value="Tambah"></td>
+        </tr>
+    </table>
 </form>
+</body>
 
 <?php include('footer.php'); ?>

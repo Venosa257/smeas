@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <link rel="stylesheet" href="./assets/css/style.bundle.css">
 </head>
 <body>
     <div>

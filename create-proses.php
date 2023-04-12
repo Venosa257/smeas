@@ -12,7 +12,17 @@ if(isset($_POST['tambah'])){
 	$name		= $_POST['nama'];	//membuat variabel $nama dan datanya dari inputan Nama Lengkap
 	$class		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
 	$major	    = $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
+
+	$gambar		= $_FILES['gambar']['name'];
+
 	$role       = $_POST['role'];	//membuat variabel $role dan datanya dari inputan dropdown role
+
+	$dir 		= "image/";
+	$tmpFile	= $_FILES['gambar']['tmp_name'];
+
+	move_uploaded_file($tmpFile, $dir.$gambar);
+
+	die();
 
 	//melakukan query dengan perintah INSERT INTO untuk memasukkan data ke database
 	$sql = "INSERT INTO sys_users (name, class, major, role_id) VALUES('$name', '$class', '$major', '$role')";
