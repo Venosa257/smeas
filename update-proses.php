@@ -13,6 +13,21 @@ if(isset($_POST['simpan'])){
 	$kelas		= $_POST['kelas'];	//membuat variabel $kelas dan datanya dari inputan dropdown Kelas
 	$jurusan	= $_POST['jurusan'];	//membuat variabel $jurusan dan datanya dari inputan dropdown Jurusan
 
+	$gambar		= $_FILES['gambar']['name'];
+
+	$queryShow = "SELECT * FROM sys_users WHERE id_user='$id'";
+	$sqlShow = mysqli_query($koneksi ,$queryShow);
+	$result = mysqli_fetch_assoc($sqlShow);
+
+	var_dump($_FILES);
+	die();
+
+	if($_FILES['gambar']['name'] == ""){
+		echo "kosong";
+	}else{
+		echo "ada isi";
+	}
+
 	//melakukan query dengan perintah UPDATE untuk update data ke database dengan kondisi WHERE siswa_id='$id' <- diambil dari inputan hidden id
 	//$update = mysql_query("UPDATE siswa SET siswa_nis='$nis', siswa_nama='$nama', siswa_kelas='$kelas', siswa_jurusan='$jurusan' WHERE siswa_id='$id'") or die(mysql_error());
     $sql = "UPDATE sys_users SET name='$nama', class='$kelas', major='$jurusan' WHERE id_user='$id'";

@@ -34,7 +34,7 @@ if(mysqli_num_rows($result) == 0){
 
 
 
-<form action="update-proses.php" method="post">
+<form action="update-proses.php" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="id" value="<?php echo $id; ?>">	<!-- membuat inputan hidden dan nilainya adalah siswa_id -->
 	<table cellpadding="3" cellspacing="0">
 		<tr>
@@ -70,6 +70,11 @@ if(mysqli_num_rows($result) == 0){
 				</select>
 			</td>
 		</tr>
+        <tr>
+            <td>Gambar</td>
+            <td>:</td>
+            <td><input type="file" name="gambar" id="gambar" accept="image/*"></td>
+        </tr>
 		<tr>
 			<td>&nbsp;</td>
 			<td></td>

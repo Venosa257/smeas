@@ -22,10 +22,8 @@ if(isset($_POST['tambah'])){
 
 	move_uploaded_file($tmpFile, $dir.$gambar);
 
-	die();
-
 	//melakukan query dengan perintah INSERT INTO untuk memasukkan data ke database
-	$sql = "INSERT INTO sys_users (name, class, major, role_id) VALUES('$name', '$class', '$major', '$role')";
+	$sql = "INSERT INTO sys_users (name, class, major, role_id, image) VALUES('$name', '$class', '$major', '$role', '$gambar')";
 
 	//jika query input sukses
 	if (mysqli_query($koneksi, $sql)) {

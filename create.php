@@ -5,67 +5,63 @@
     <link rel="stylesheet" href="./assets/css/style.bundle.css">
 </head>
 <body>
-<h3>Tambah Data Siswa</h3>
-
-<form action="create-proses.php" method="post" enctype="multipart/form-data">
-    <table cellpadding="3" cellspacing="0">
-        <tr>
-            <td>Nama Lengkap</td>
-            <td>:</td>
-            <td><input type="text" name="nama" size="30" required></td>
-        </tr>
-        <tr>
-            <td>Kelas</td>
-            <td>:</td>
-            <td>
-                <select name="kelas" required>
-                    <option value="">Pilih Kelas</option>
-                    <option value="X">X</option>
-                    <option value="XI">XI</option>
-                    <option value="XII">XII</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Jurusan</td>
-            <td>:</td>
-            <td>
-                <select name="jurusan" required>
-                    <option value="">Pilih Jurusan</option>
-                    <option value="RPL">RPL</option>
-                    <option value="Multimedia">Multimedia</option>
-                    <option value="Akuntansi">Akuntansi</option>
-                    <option value="Perbankan">Perbankan</option>
-                    <option value="Pemasaran">Pemasaran</option>
-                    <option value="Perhotelan">Perhotelan</option>
-                    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Role</td>
-            <td>:</td>
-            <td>
-                <select name="role" required>
-                    <option value="">Pilih Role</option>
-                    <option value="1">Admin</option>
-                    <option value="2">Teacher</option>
-                    <option value="3">Student</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Gambar</td>
-            <td>:</td>
-            <td><input type="file" name="gambar" id="gambar" ></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-            <td><input type="submit" name="tambah" value="Tambah"></td>
-        </tr>
-    </table>
-</form>
+    <div class="container">
+        <div class="">
+            <h3>Tambah Data Siswa</h3>
+        </div>
+        <div class="row">
+            <form action="create-proses.php" method="post" enctype="multipart/form-data">
+                <div class="col-md-12" style="display: flex;">
+                    <div class="col-md-6">
+                        <label class="form-label">Nama Lengkap</label>
+                        <input class="form-control" type="text" name="nama" size="30" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Kelas</label>
+                        <select class="form-control" name="kelas" required>
+                            <option value="">Pilih Kelas</option>
+                            <option value="X">X</option>
+                            <option value="XI">XI</option>
+                            <option value="XII">XII</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12" style="display: flex;">
+                    <div class="col-md-6">
+                        <label class="form-label">Jurusan</label>
+                        <select class="form-control" name="jurusan" required>
+                            <option value="">Pilih Jurusan</option>
+                            <option value="RPL">RPL</option>
+                            <option value="Multimedia">Multimedia</option>
+                            <option value="Akuntansi">Akuntansi</option>
+                            <option value="Perbankan">Perbankan</option>
+                            <option value="Pemasaran">Pemasaran</option>
+                            <option value="Perhotelan">Perhotelan</option>
+                            <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Role</label>
+                        <select class="form-control" name="role" required>
+                            <option value="">Pilih Role</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Teacher</option>
+                            <option value="3">Student</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <label class="form-label">Gambar</label>
+                        <input type="file" name="gambar" id="gambar" accept="image/*"></td>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" name="tambah" value="Tambah"></td>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 <?php include('footer.php'); ?>
