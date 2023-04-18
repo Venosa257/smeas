@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Kelas</label>
-                        <select class="form-control" name="kelas" required>
+                        <select class="form-select form-select-sm" name="kelas" required>
                             <option value="">Pilih Kelas</option>
                             <option value="X">X</option>
                             <option value="XI">XI</option>
@@ -29,7 +29,7 @@
                 <div class="col-md-12" style="display: flex;">
                     <div class="col-md-6">
                         <label class="form-label">Jurusan</label>
-                        <select class="form-control" name="jurusan" required>
+                        <select class="form-select form-select-sm" name="jurusan" required>
                             <option value="">Pilih Jurusan</option>
                             <option value="RPL">RPL</option>
                             <option value="Multimedia">Multimedia</option>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Role</label>
-                        <select class="form-control" name="role" required>
+                        <select class="form-select form-select-sm" name="role" required>
                             <option value="">Pilih Role</option>
                             <option value="1">Admin</option>
                             <option value="2">Teacher</option>
